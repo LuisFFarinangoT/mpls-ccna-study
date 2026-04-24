@@ -1,3 +1,5 @@
 # Editor
 .git/
 .vscode/
+.terraform/
+terraform.tfstate
