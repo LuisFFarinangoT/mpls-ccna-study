@@ -37,7 +37,7 @@ resource "gns3_template" "router4" {
 resource "gns3_template" "router5" {
   project_id  = gns3_project.project1.id
   template_id = data.gns3_template_id.router_template.id
-  name        = "Router2"
+  name        = "router5"
   compute_id  = "local"
   x           = 200
   y           = 200
@@ -46,7 +46,7 @@ resource "gns3_template" "router5" {
 resource "gns3_template" "router6" {
   project_id  = gns3_project.project1.id
   template_id = data.gns3_template_id.router_template.id
-  name        = "Router3"
+  name        = "Router6"
   compute_id  = "local"
   x           = 300
   y           = 200
