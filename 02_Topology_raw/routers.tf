@@ -54,28 +54,28 @@ resource "gns3_template" "router6" {
 
 
 
-resource "gns3_template" "router4" {
+resource "gns3_template" "router7" {
   project_id  = gns3_project.project1.id
   template_id = data.gns3_template_id.router_template.id
-  name        = "Router4"
+  name        = "Router7"
   compute_id  = "local"
   x           = 100
   y           = 300
 }
 
-resource "gns3_template" "router5" {
+resource "gns3_template" "router8" {
   project_id  = gns3_project.project1.id
   template_id = data.gns3_template_id.router_template.id
-  name        = "Router2"
+  name        = "Router8"
   compute_id  = "local"
   x           = 200
   y           = 300
 }
 
-resource "gns3_template" "router6" {
+resource "gns3_template" "router9" {
   project_id  = gns3_project.project1.id
   template_id = data.gns3_template_id.router_template.id
-  name        = "Router3"
+  name        = "Router9"
   compute_id  = "local"
   x           = 300
   y           = 300
