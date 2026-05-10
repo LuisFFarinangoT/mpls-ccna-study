@@ -80,3 +80,49 @@ resource "gns3_template" "router9" {
   x           = 300
   y           = 300
 }
+
+
+resource "gns3_template" "router10" {
+  project_id  = gns3_project.project1.id
+  template_id = data.gns3_template_id.router_template.id
+  name        = "Router10"
+  compute_id  = "local"
+  x           = 50
+  y           = 0
+}
+
+resource "gns3_template" "router11" {
+  project_id  = gns3_project.project1.id
+  template_id = data.gns3_template_id.router_template.id
+  name        = "Router11"
+  compute_id  = "local"
+  x           = 200
+  y           = 0
+}
+
+resource "gns3_template" "router12" {
+  project_id  = gns3_project.project1.id
+  template_id = data.gns3_template_id.router_template.id
+  name        = "Router12"
+  compute_id  = "local"
+  x           = 350
+  y           = 0
+}
+
+resource "gns3_template" "router13" {
+  project_id  = gns3_project.project1.id
+  template_id = data.gns3_template_id.router_template.id
+  name        = "Router13"
+  compute_id  = "local"
+  x           = 50
+  y           = 400
+}
+
+resource "gns3_template" "router14" {
+  project_id  = gns3_project.project1.id
+  template_id = data.gns3_template_id.router_template.id
+  name        = "Router14"
+  compute_id  = "local"
+  x           = 350
+  y           = 400
+}

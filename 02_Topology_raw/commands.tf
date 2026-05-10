@@ -11,6 +11,11 @@ resource "gns3_start_all" "start_nodes" {
     gns3_template.router7,
     gns3_template.router8,
     gns3_template.router9,
+    gns3_template.router10,
+    gns3_template.router11,
+    gns3_template.router12,
+    gns3_template.router13,
+    gns3_template.router14,
     gns3_link.r1_r4,
     gns3_link.r2_r4,
     gns3_link.r2_r5,
@@ -23,6 +28,10 @@ resource "gns3_start_all" "start_nodes" {
     gns3_link.r6_r9,
     gns3_link.r7_r8,
     gns3_link.r8_r9,
-
+    gns3_link.r1_r10,
+    gns3_link.r2_r11,
+    gns3_link.r3_r12,
+    gns3_link.r7_r13,
+    gns3_link.r9_r14,
   ]
 }
