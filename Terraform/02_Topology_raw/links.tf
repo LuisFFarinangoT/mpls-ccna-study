@@ -164,3 +164,23 @@ resource "gns3_link" "r9_r14" {
   node_b_adapter = 0
   node_b_port    = 0
 }
+
+resource "gns3_link" "switch_cloud" {
+  project_id     = gns3_project.project1.id
+  node_a_id      = gns3_switch.switch1.id
+  node_a_adapter = 0
+  node_a_port    = 0
+  node_b_id      = gns3_cloud.cloud1.id
+  node_b_adapter = 0
+  node_b_port    = 2
+}
+# Router to switch links // examples
+resource "gns3_link" "r1_switch" {
+  project_id     = gns3_project.project1.id
+  node_a_id      = gns3_template.router1.id
+  node_a_adapter = 0
+  node_a_port    = 0
+  node_b_id      = gns3_switch.switch1.id
+  node_b_adapter = 0
+  node_b_port    = 1
+}
