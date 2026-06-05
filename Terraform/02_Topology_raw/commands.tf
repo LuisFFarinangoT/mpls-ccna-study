@@ -16,7 +16,7 @@ resource "gns3_start_all" "start_nodes" {
     gns3_template.router12,
     gns3_template.router13,
     gns3_template.router14,
-    gns3_switch.switch1,
+    gns3_switch.switch_24,
     gns3_cloud.cloud1,
     gns3_link.r1_r4,
     gns3_link.r2_r4,
@@ -35,8 +35,10 @@ resource "gns3_start_all" "start_nodes" {
     gns3_link.r3_r12,
     gns3_link.r7_r13,
     gns3_link.r9_r14,
-    gns3_link.r1_cloud,
-    gns3_link.r2_cloud,
+    gns3_link.cloud_switch,
+    //gns3_link.r1_switch,
+    
+    /*gns3_link.r2_cloud,
     gns3_link.r3_cloud,
     gns3_link.r4_cloud,
     gns3_link.r5_cloud,
@@ -50,6 +52,7 @@ resource "gns3_start_all" "start_nodes" {
     gns3_link.r13_cloud,
     gns3_link.r14_cloud,
     gns3_link.switch_cloud
+    */
   
   ]
 }
