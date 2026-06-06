@@ -172,7 +172,7 @@ resource "gns3_link" "cloud_switch" {
   node_a_port    = 0
   node_b_id      = gns3_cloud.cloud1.id
   node_b_adapter = 0
-  node_b_port    = 1
+  node_b_port    = 0
 }
 # Router to switch links // examples
 resource "gns3_link" "r1_switch" {
