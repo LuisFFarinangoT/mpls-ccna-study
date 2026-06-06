@@ -16,7 +16,7 @@ resource "gns3_start_all" "start_nodes" {
     gns3_template.router12,
     gns3_template.router13,
     gns3_template.router14,
-    gns3_switch.switch_24,
+    gns3_template.switch_24,
     gns3_cloud.cloud1,
     gns3_link.r1_r4,
     gns3_link.r2_r4,
@@ -36,23 +36,21 @@ resource "gns3_start_all" "start_nodes" {
     gns3_link.r7_r13,
     gns3_link.r9_r14,
     gns3_link.cloud_switch,
-    //gns3_link.r1_switch,
-    
-    /*gns3_link.r2_cloud,
-    gns3_link.r3_cloud,
-    gns3_link.r4_cloud,
-    gns3_link.r5_cloud,
-    gns3_link.r6_cloud,
-    gns3_link.r7_cloud,
-    gns3_link.r8_cloud,
-    gns3_link.r9_cloud,
-    gns3_link.r10_cloud,
-    gns3_link.r11_cloud,
-    gns3_link.r12_cloud,
-    gns3_link.r13_cloud,
-    gns3_link.r14_cloud,
-    gns3_link.switch_cloud
-    */
+    gns3_link.r1_switch,
+    gns3_link.r2_switch,
+    gns3_link.r3_switch,
+    gns3_link.r4_switch,
+    gns3_link.r5_switch,
+    gns3_link.r6_switch,
+    gns3_link.r7_switch,
+    gns3_link.r8_switch,
+    gns3_link.r9_switch,
+    gns3_link.r10_switch,
+    gns3_link.r11_switch,
+    gns3_link.r12_switch,
+    gns3_link.r13_switch,
+    gns3_link.r14_switch,
+
   
   ]
 }

@@ -1,6 +1,8 @@
-resource "gns3_switch" "switch_24" {
+resource "gns3_template" "switch_24" {
   project_id = gns3_project.project1.id
+  template_id = data.gns3_template_id.switch_template.id
   name       = "Switch1"
+  compute_id  = "local"
   x           = 200
   y           = -100
 }
