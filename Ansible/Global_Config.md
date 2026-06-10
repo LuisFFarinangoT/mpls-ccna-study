@@ -4,6 +4,8 @@
 - Copy ssh-key from Config-Server to every router 
 
 ### SSH config 
+Based on  [SSH config ](https://netsudrun.wordpress.com/2019/12/19/how-to-login-to-cisco-devices-using-ssh-key/)
+
 #### Domain and password config 
 ```cisco
 R1#en

@@ -1,0 +1,53 @@
+---
+all:
+  children:
+    cisco_ios:
+      hosts:
+        router-01:
+          ansible_host: 192.168.1.20
+        router-02:
+          ansible_host: 192.168.1.21
+        router-03:
+          ansible_host: 192.168.1.22
+        router-04:
+          ansible_host: 192.168.1.23
+        router-05:
+          ansible_host: 192.168.1.24
+        router-06:
+          ansible_host: 192.168.1.25
+        router-07:
+          ansible_host: 192.168.1.26
+        router-08:
+          ansible_host: 192.168.1.27
+        router-09:
+          ansible_host: 192.168.1.28
+        router-10:
+          ansible_host: 192.168.1.29
+        router-11:
+          ansible_host: 192.168.1.30
+        router-12:
+          ansible_host: 192.168.1.31
+        router-13:
+          ansible_host: 192.168.1.32
+        router-14:
+          ansible_host: 192.168.1.33
+      vars:
+        ansible_network_os: cisco.ios.ios
+
+    cisco_nxos:
+      hosts:
+        nexus-switch-01:
+          ansible_host: 192.168.20.15
+      vars:
+        ansible_network_os: cisco.nxos.nxos
+  vars_files:
+    - group_vars/all/secrets.yml
+    - group_vars/all/vars_used.yml
+  vars:
+    ansible_connection: ansible.netcommon.network_cli
+    ansible_user: lfftadmin
+    ansible_password: "{{ my_clusters_root_password }}"
+    ansible_become: true
+    ansible_become_method: enable
+    ansible_become_password: "{{ my_clusters_root_password }}"
+    ansible_ssh_private_key_file: /home/lfft/.ssh/id_ed25519
