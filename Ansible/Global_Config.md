@@ -69,3 +69,11 @@ Warning: Permanently added '192.168.1.33' (RSA) to the list of known hosts.
 R1#
 
 ```
+
+#### SSH test 
+```cisco
+R1(config)#int g1/0
+R1(config-if)#ip add 192.168.1.20 255.255.255.192
+R1(config-if)#no sh
+R1(config-if)#
+```
