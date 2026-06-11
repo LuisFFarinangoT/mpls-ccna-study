@@ -77,3 +77,18 @@ R1(config-if)#ip add 192.168.1.20 255.255.255.192
 R1(config-if)#no sh
 R1(config-if)#
 ```
+
+#### ssh config on server 
+```cisco
+Host *
+    KexAlgorithms +diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1
+    HostKeyAlgorithms +ssh-rsa
+    PubkeyAcceptedAlgorithms +ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
+    PubkeyAcceptedAlgorithms +ssh-rsa
+    CASignatureAlgorithms +ssh-rsa
+    Ciphers +aes128-cbc,aes256-cbc
+    RequiredRSASize 0
+    MACs +hmac-sha1,hmac-sha1-96
+    StrictHostKeyChecking no
+```

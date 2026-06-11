@@ -13,9 +13,13 @@ all:
     ansible_network_os: cisco.ios.io
     ansible_connection: ansible.netcommon.network_cli
     ansible_user: lfftadmin
-    ansible_password: lfftadmin
     ansible_password: "{{ my_clusters_root_password }}"
-    ansible_become: true
-    ansible_become_method: enable
-    ansible_become_password: "{{ my_clusters_root_password }}"
+    #ansible_become: true
+    #ansible_become_method: enable
+    #ansible_become_password: "{{ my_clusters_root_password }}"
     ansible_ssh_private_key_file: /home/lfft/.ssh/id_rsa.pub
+    #ansible_ssh_common_args: '-o PubkeyAcceptedAlgorithms=+ssh-rsa,+diffie-hellman-group14-sha1 -c aes256-cbc -o RequiredRSASize=1024'
+    ansible_ssh_common_args: '-o KexAlgorithms=+diffie-hellman-group14-sha1,diffie-hellman-group1-sha1'
+    ansible_ssh_type: libssh
+    ansible_libssh_hostkeys: "+ssh-rsa"
+    ansible_libssh_publickey_algorithms: "+ssh-rsa"
