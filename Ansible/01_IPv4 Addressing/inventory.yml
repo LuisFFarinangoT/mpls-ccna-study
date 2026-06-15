@@ -5,6 +5,34 @@ all:
       hosts:
         R1:
           ansible_host: 192.168.1.20
+        R2:
+          ansible_host: 192.168.1.21
+        R3:
+          ansible_host: 192.168.1.22
+        R4:
+          ansible_host: 192.168.1.23
+        R5:
+          ansible_host: 192.168.1.24
+        R5:
+          ansible_host: 192.168.1.25
+        R6:
+          ansible_host: 192.168.1.26
+        R7:
+          ansible_host: 192.168.1.27
+        R8:
+          ansible_host: 192.168.1.28
+        R9:
+          ansible_host: 192.168.1.29
+        R10:
+          ansible_host: 192.168.1.30
+        R11:
+          ansible_host: 192.168.1.31
+        R12:
+          ansible_host: 192.168.1.32
+        R13:
+          ansible_host: 192.168.1.33
+        R14:
+          ansible_host: 192.168.1.33
         
   vars_files:
     - group_vars/all/secrets.yml
