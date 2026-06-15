@@ -49,11 +49,15 @@ t@opensuse-server
 R1(config)#ip ssh pubkey-chain
 R1(conf-ssh-pubkey)#username lfftadmin
 R1(conf-ssh-pubkey-user)#key-string
-R1(conf-ssh-pubkey-data)#$2EAAAADAQABAAAAgQDPFV36bmyO+pr1+Fe64OV8CAKInm3c5FEY
-R1(conf-ssh-pubkey-data)#$aWnsIzGSowKk9/LJYnyLF+4zd+NxcXQjer2XO58EceWVhS+n0AQ
-R1(conf-ssh-pubkey-data)#$jYrqVUutx1JUyCqBZOZGJy0gyTiOYEWTWrXfluqccO98Q== lff
-R1(conf-ssh-pubkey-data)#t@opensuse-server
-R1(conf-ssh-pubkey-data)#
+R1(conf-ssh-pubkey-data)#$QABAAABAQCdly04Pb3p3tiKsERLNV/YsdsrQMFDIM4+
+R1(conf-ssh-pubkey-data)#$0Cc1TjCsbVULllCXeceqC5KekOAI+ch7PkdpLVg1edKipO5cTef
+R1(conf-ssh-pubkey-data)#$3iAAQ80N9/14hMi9yUwUpwfgqN/zXgCW/mDPQE7ans5JxSY/2bi
+R1(conf-ssh-pubkey-data)#$3kLRJyeKgEMpSnuyRlxVkSPdZt/r1IO/HrTrGVp8t7vp0UdheEM
+R1(conf-ssh-pubkey-data)#$6vmtQsTxBvOj5CJDEwO0A/ys96pzv/oAwhF7V0+mR54evqPEIs5
+R1(conf-ssh-pubkey-data)#oY8ibEM7jaQZqAbXZ0jj
+R1(conf-ssh-pubkey-data)#exit
+R1(conf-ssh-pubkey-user)#exit
+
 
 ```
 
