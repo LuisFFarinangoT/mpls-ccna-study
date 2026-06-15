@@ -11,6 +11,7 @@ Based on  [SSH config ](https://netsudrun.wordpress.com/2019/12/19/how-to-login-
 R1#en
 R1#config t
 R1(config)#ip domain name lfft.com
+R1(config)#username lfftadmintest password lfftadmintest
 R1(config)#username lfftadmin privilege 15 password lfftadmin
 ```
 #### VTY acces config 
