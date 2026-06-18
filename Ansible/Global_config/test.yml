@@ -1,9 +1,7 @@
 - name: Manage Cisco Device Banners
-  hosts: R1
+  hosts: R1,R2
   gather_facts: false
   connection: network_cli
-  vars:
-    ansible_network_os: cisco.ios.ios
   tasks:
     - name: Configure the MOTD banner
       cisco.ios.ios_banner:

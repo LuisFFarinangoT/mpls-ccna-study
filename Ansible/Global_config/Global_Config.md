@@ -11,8 +11,7 @@ Based on  [SSH config ](https://netsudrun.wordpress.com/2019/12/19/how-to-login-
 R1#en
 R1#config t
 R1(config)#ip domain name lfft.com
-R1(config)#username lfftadmintest password lfftadmintest
-R1(config)#username lfftadmin privilege 15 password lfftadmin
+R1(config)#username lfftadmin privilege 15 password lfftadminpass
 ```
 #### VTY acces config 
 ```cisco
@@ -28,7 +27,7 @@ Choose the size of the key modulus in the range of 360 to 4096 for your
   General Purpose Keys. Choosing a key modulus greater than 512 may take
   a few minutes.
 
-How many bits in the modulus [512]:1024
+How many bits in the modulus [512]:2048
 % Generating 1024 bit RSA keys, keys will be non-exportable...
 [OK] (elapsed time was 2 seconds)
 
