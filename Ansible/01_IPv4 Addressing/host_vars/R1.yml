@@ -1,0 +1,7 @@
+router_interfaces:
+  - name: POS3/0
+    ipv4:
+      - address: 10.0.1.1/24
+  - name: GigabitEthernet0/0
+    ipv4:
+      - address: 1.1.1.1/32

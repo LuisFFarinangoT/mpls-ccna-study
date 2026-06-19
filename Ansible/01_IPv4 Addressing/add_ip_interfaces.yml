@@ -1,0 +1,10 @@
+---
+- name: Configure IP Addresses on all interfaces 
+  hosts: routers
+  gather_facts: false
+
+  tasks:
+    - name: Add IP address on interfaces 
+      cisco.ios.ios_l3_interfaces:
+        config: "{{ router_interfaces }}"
+        state: merged
