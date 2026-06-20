@@ -1,10 +1,27 @@
 ---
-- name: Configure IP Addresses on all interfaces 
-  hosts: routers
-  gather_facts: false
+
+- name: configure main routers
+  hosts: all
+  gather_facts: no
+  connection: network_cli
+  vars_files:
+    - routers_interfaces.yml
 
   tasks:
-    - name: Add IP address on interfaces 
-      cisco.ios.ios_l3_interfaces:
-        config: "{{ router_interfaces }}"
-        state: merged
+    - name: configure interfaces and no shut
+      cisco.ios.ios_config:
+        lines:
+          - interface {{ item.intf }}
+          - description {{ item.desc }}
+          - no shutdown
+      loop: "{{ interfaces[inventory_hostname] | default([]) }}"
+
+    - name: configure ip
+      cisco.ios.ios_config:
+        lines:
+          - interface {{ item.intf }}
+          - ip address {{ item.ip }} {{ item.mask }}
+      loop: "{{ interfaces[inventory_hostname] | default ([]) }}"
+      when:
+        - item.ip is defined
+        - item.mask is defined
