@@ -1,7 +1,9 @@
-router_interfaces:
-  - name: POS3/0
-    ipv4:
-      - address: 10.0.1.1/24
+device_interfaces:
   - name: GigabitEthernet0/0
-    ipv4:
-      - address: 1.1.1.1/32
+    description: "Link R1 to R10"
+    ip_address: "192.50.25.81"
+    subnet_mask: "255.255.255.248"
+  - name: POS3/0
+    description: "Link R1 TO R4"
+    ip_address: "192.50.25.89"
+    subnet_mask: "255.255.255.252"

@@ -1,0 +1,13 @@
+device_interfaces:
+  - name: GigabitEthernet0/0
+    description: "Link R9 to R10"
+    ip_address: "192.50.25.149"
+    subnet_mask: "255.255.255.248"
+  - name: POS3/0
+    description: "Link R9 TO R6"
+    ip_address: "192.50.25.130"
+    subnet_mask: "255.255.255.252"
+  - name: POS4/0
+    description: "Link R9 TO R8"
+    ip_address: "192.50.25.142"
+    subnet_mask: "255.255.255.252"
