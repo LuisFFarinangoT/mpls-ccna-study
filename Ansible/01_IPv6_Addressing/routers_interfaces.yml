@@ -1,0 +1,23 @@
+R1:
+  - intf: GigabitEthernet0/0
+    desc: London Uplink
+    ip: 192.168.1.1
+    mask: 255.255.255.0
+
+R2:
+  - intf: GigabitEthernet0/0
+    desc: Manchester Uplink
+    ip: 192.168.2.1
+    mask: 255.255.255.0
+
+R3:
+  - intf: GigabitEthernet0/0
+    desc: Asia Uplink
+    ip: 192.168.3.1
+    mask: 255.255.255.0
+
+R4:
+  - intf: GigabitEthernet0/0
+    desc: America Uplink
+    ip: 192.168.4.1
+    mask: 255.255.255.0
