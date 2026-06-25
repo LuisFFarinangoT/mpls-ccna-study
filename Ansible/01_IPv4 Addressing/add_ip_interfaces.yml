@@ -10,3 +10,6 @@
           - no shutdown
         parents: "interface {{ item.name }}"
       loop: "{{ device_interfaces }}"
+    - name: Save config
+      cisco.ios.ios_config:
+        save_when: modified
