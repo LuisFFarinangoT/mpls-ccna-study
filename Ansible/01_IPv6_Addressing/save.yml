@@ -1,0 +1,8 @@
+- name: Configure IOS devices
+  hosts: all
+  gather_facts: no
+  tasks:
+  - name: Fetch running config
+    cisco.ios.ios_command:
+        commands: wr
+     

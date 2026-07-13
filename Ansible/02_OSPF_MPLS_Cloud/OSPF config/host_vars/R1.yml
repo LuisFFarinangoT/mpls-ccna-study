@@ -1,4 +1,5 @@
 device_interfaces:
+  - router_id : 1.1.1.1
   - name: GigabitEthernet0/0
     description: "Link R1 to R10"
     ip_address: "192.50.25.81"
