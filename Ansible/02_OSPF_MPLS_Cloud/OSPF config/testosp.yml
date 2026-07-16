@@ -1,0 +1,22 @@
+---
+- name: Configure OSPF on Cisco IOS Interfaces
+  hosts: R1
+  gather_facts: false
+  connection: network_cli
+
+  vars:
+    ospf_process_id: 110
+    ospf_area_id: 0
+    # List of interfaces to loop through
+    network_interfaces:
+      - Loopback0
+      - GigabitEthernet1
+      - GigabitEthernet2
+
+  tasks:
+    - name: Enable OSPF on specific interfaces using a loop
+      cisco.ios.ios_config:
+        lines:
+          - "ip ospf {{ ospf_process_id }} area {{ ospf_area_id }}"
+        parents: "interface {{ item }}"
+      loop: "{{ network_interfaces }}"

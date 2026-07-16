@@ -1,8 +1,8 @@
-- name: Configure IOS devices
-  hosts: all
+- name: Configure Interfaces on Cisco IOS
+  hosts: R1
   gather_facts: no
   tasks:
-  - name: Fetch running config
-    cisco.ios.ios_command:
-        commands: wr
-     
+    - name: Save running configuration to NVRAM
+      cisco.ios.ios_command:
+        commands:
+          - write memory
