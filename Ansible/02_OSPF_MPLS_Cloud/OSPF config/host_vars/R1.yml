@@ -1,10 +1,13 @@
-device_interfaces:
-  - router_id : 1.1.1.1
+ospf_interfaces:
   - name: GigabitEthernet0/0
-    description: "Link R1 to R10"
-    ip_address: "192.50.25.81"
-    subnet_mask: "255.255.255.248"
+    address_family:
+      - afi: ipv4
+        process:
+          id: 10
+          area_id: 0
   - name: POS3/0
-    description: "Link R1 TO R4"
-    ip_address: "192.50.25.89"
-    subnet_mask: "255.255.255.252"
+    address_family:
+      - afi: ipv4
+        process:
+          id: 10
+          area_id: 0

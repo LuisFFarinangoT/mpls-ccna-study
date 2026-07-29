@@ -1,9 +1,19 @@
-device_interfaces:
+ospf_interfaces:
   - name: GigabitEthernet0/0
-    description: "Link R13 to R17"
-    ip_address: "192.50.25.146"
-    subnet_mask: "255.255.255.252"
+    address_family:
+      - afi: ipv4
+        process:
+          id: 10
+          area_id: 0
   - name: POS3/0
-    description: "LAN R13"
-    ip_address: "192.50.25.193"
-    subnet_mask: "255.255.255.240"
+    address_family:
+      - afi: ipv4
+        process:
+          id: 10
+          area_id: 0
+  - name: POS4/0
+    address_family:
+      - afi: ipv4
+        process:
+          id: 10
+          area_id: 0

@@ -2,7 +2,6 @@
 - name: Apply wr commands all routers 
   hosts: all
   gather_facts: no
-
   tasks:
   - name: save config to memory
     ansible.netcommon.cli_command:

@@ -1,17 +1,19 @@
-device_interfaces:
+ospf_interfaces:
+  - name: GigabitEthernet0/0
+    address_family:
+      - afi: ipv4
+        process:
+          id: 10
+          area_id: 0
   - name: POS3/0
-    description: "Link R8 to R15"
-    ip_address: "192.50.25.122"
-    subnet_mask: "255.255.255.252"
+    address_family:
+      - afi: ipv4
+        process:
+          id: 10
+          area_id: 0
   - name: POS4/0
-    description: "Link R8 TO R6"
-    ip_address: "192.50.25.126"
-    subnet_mask: "255.255.255.252"
-  - name: POS5/0
-    description: "Link R8 TO R7"
-    ip_address: "192.50.25.138"
-    subnet_mask: "255.255.255.252"
-  - name: POS6/0
-    description: "Link R8 TO R9"
-    ip_address: "192.50.25.141"
-    subnet_mask: "255.255.255.252"
+    address_family:
+      - afi: ipv4
+        process:
+          id: 10
+          area_id: 0
