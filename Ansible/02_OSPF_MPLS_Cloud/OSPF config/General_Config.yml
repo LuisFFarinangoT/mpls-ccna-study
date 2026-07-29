@@ -1,6 +1,6 @@
 ---
 - name: Configure Cisco Interface Level OSPF via Resource Module Loop
-  hosts: R1
+  hosts: all 
   gather_facts: false
   connection: network_cli
 
