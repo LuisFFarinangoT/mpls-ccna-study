@@ -1,10 +1,5 @@
 ospf_interfaces:
-  - name: GigabitEthernet0/0
-    address_family:
-      - afi: ipv4
-        process:
-          id: 10
-          area_id: 0
+
   - name: POS3/0
     address_family:
       - afi: ipv4
