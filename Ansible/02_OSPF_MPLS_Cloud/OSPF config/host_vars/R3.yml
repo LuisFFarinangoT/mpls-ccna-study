@@ -6,3 +6,7 @@ ospf_interfaces:
         process:
           id: 10
           area_id: 0
+
+mpls_label_ranges:
+  - min_label: 300
+  - max_label: 399

@@ -6,3 +6,8 @@ ospf_interfaces:
         process:
           id: 10
           area_id: 0
+          autoconfig: true
+          sync: true
+mpls_label_ranges:
+  - min_label: 100
+  - max_label: 199
