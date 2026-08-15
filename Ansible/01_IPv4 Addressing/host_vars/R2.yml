@@ -11,3 +11,7 @@ device_interfaces:
     description: "Link R2 TO R5"
     ip_address: "192.50.25.101"
     subnet_mask: "255.255.255.252"
+  - name: Loopback10
+    description: "Loopback on router "
+    ip_address: "2.2.2.2"
+    subnet_mask: "255.255.255.255"

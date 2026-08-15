@@ -27,7 +27,13 @@ ospf_interfaces:
           id: 10
           area_id: 0
 
-
+  - name: Loopback10 
+    address_family:
+      - afi: ipv4
+        process:
+          id: 10
+          area_id: 0
+          
 mpls_label_ranges:
   - min_label: 400
     max_label: 499

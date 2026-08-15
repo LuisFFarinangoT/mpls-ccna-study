@@ -7,3 +7,7 @@ device_interfaces:
     description: "LAN R12"
     ip_address: "192.50.25.33"
     subnet_mask: "255.255.255.240"
+  - name: Loopback10
+    description: "Loopback on router "
+    ip_address: "12.12.12.12"
+    subnet_mask: "255.255.255.255"

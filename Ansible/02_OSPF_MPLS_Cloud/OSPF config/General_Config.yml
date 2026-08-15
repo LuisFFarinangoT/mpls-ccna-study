@@ -8,6 +8,8 @@
       cisco.ios.ios_ospf_interfaces:
         config:
           - name: "{{ item.name }}"
+            network_type:
+            point_to_point: true
             address_family: "{{ item.address_family }}"
         state: merged
       loop: "{{ ospf_interfaces }}"
@@ -31,7 +33,7 @@
       loop: "{{ mpls_label_ranges }}"
       when: mpls_label_ranges is defined
 
-    - name: Enable MPLS LDP sync and autoconfig via CLI if collection lacks direct module support
+    - name: Enable MPLS LDP sync and autoconfig on every interface 
       cisco.ios.ios_config:
         lines:
           - mpls ldp autoconfig

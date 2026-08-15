@@ -11,3 +11,7 @@ device_interfaces:
     description: "Link R9 TO R8"
     ip_address: "192.50.25.142"
     subnet_mask: "255.255.255.252"
+  - name: Loopback10
+    description: "Loopback on router "
+    ip_address: "9.9.9.9"
+    subnet_mask: "255.255.255.255"
