@@ -9,4 +9,4 @@ ospf_interfaces:
 
 mpls_label_ranges:
   - min_label: 300
-  - max_label: 399
+    max_label: 399

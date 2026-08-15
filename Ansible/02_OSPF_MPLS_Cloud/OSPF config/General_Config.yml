@@ -16,8 +16,6 @@
       cisco.ios.ios_config:
         lines:
           - mpls ip
-          - mpls ldp sync
-
 
     - name: Enable MPLS on specified interfaces
       cisco.ios.ios_config:
@@ -33,4 +31,11 @@
       loop: "{{ mpls_label_ranges }}"
       when: mpls_label_ranges is defined
 
-    
+    - name: Enable MPLS LDP sync and autoconfig via CLI if collection lacks direct module support
+      cisco.ios.ios_config:
+        lines:
+          - mpls ldp autoconfig
+          - mpls ldp sync
+        parents:
+          - router ospf {{ item.address_family[0].process.id }}
+      loop: "{{ ospf_interfaces }}"

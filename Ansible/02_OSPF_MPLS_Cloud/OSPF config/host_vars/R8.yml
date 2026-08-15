@@ -28,4 +28,4 @@ ospf_interfaces:
           area_id: 0
 mpls_label_ranges:
   - min_label: 800
-  - max_label: 899
+    max_label: 899
