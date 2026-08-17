@@ -1,0 +1,16 @@
+---
+- name: OSPF AREA 0 v4 AND MPLS
+  hosts: R1,R2,R3,R4,R5,R6,R7,R8,R9
+  gather_facts: false
+
+  tasks:
+  - name: Reset OSPF via universal network CLI
+    ansible.netcommon.cli_command:
+      command: 'clear ip ospf process'
+      check_all: true
+      prompt:
+        - 'Reset ALL OSPF processes\? \[no\]:'
+      answer:
+        - 'yes'
+
+

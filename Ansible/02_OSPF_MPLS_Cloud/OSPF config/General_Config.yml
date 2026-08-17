@@ -4,12 +4,16 @@
   gather_facts: false
 
   tasks:
+    - name: Remove no service config
+      cisco.ios.ios_config:
+        lines:
+          - no service config
+        save_when: modified
+
     - name: Push OSPF interface parameters
       cisco.ios.ios_ospf_interfaces:
         config:
           - name: "{{ item.name }}"
-            network_type:
-            point_to_point: true
             address_family: "{{ item.address_family }}"
         state: merged
       loop: "{{ ospf_interfaces }}"
@@ -41,3 +45,6 @@
         parents:
           - router ospf {{ item.address_family[0].process.id }}
       loop: "{{ ospf_interfaces }}"
+
+
+
