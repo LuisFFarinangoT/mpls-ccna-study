@@ -1,0 +1,8 @@
+vrf definition {{ vrf_name }}
+ rd {{ vrf_rd }}
+ !
+ address-family ipv4
+  {% for rt in vrf_route_targets %}
+  route-target both {{ rt }}
+  {% endfor %}
+ exit-address-family
