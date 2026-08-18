@@ -1,0 +1,15 @@
+asn: "100"
+bgp_router_id: 3.3.3.3
+peers:
+  - neighbor: "2.2.2.2"
+    peer_asn: "100"
+    update_source: "lo10"
+  - neighbor: "1.1.1.1"
+    peer_asn: "100"
+    update_source: "lo10"
+  - neighbor: "7.7.7.7"
+    peer_asn: "100"
+    update_source: "lo10"
+  - neighbor: "9.9.9.9"
+    peer_asn: "100"
+    update_source: "lo10"
