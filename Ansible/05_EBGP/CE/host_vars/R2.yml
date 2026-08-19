@@ -1,5 +1,5 @@
 asn: "100"
-bgp_router_id: 1.1.1.1
+bgp_router_id: 2.2.2.2
 peers:
   - neighbor: "192.50.25.94"
     peer_asn: "100"
