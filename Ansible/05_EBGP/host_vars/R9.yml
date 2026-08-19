@@ -1,0 +1,7 @@
+asn: "100"
+bgp_router_id: 1.1.1.1
+peers:
+  - neighbor: "192.50.25.82"
+    peer_asn: "100"
+    remote_as: "65002"
+    vrf_name: CUSTOM_VRF

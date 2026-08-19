@@ -4,6 +4,6 @@
   gather_facts: false
 
   tasks:
-    - name: tes1
+    - name: VRF FOR BGP CONFIG
       cisco.ios.ios_config:
         lines: "{{ lookup('template', 'templates/vrf.j2') }}"
