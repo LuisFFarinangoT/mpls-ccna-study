@@ -1,0 +1,21 @@
+device_interfaces:
+  - name: POS3/0
+    description: "Link R4 TO R1"
+    ip_address: "192.50.25.90"
+    subnet_mask: "255.255.255.252"
+  - name: POS4/0
+    description: "Link R4 TO R2"
+    ip_address: "192.50.25.98"
+    subnet_mask: "255.255.255.252"
+  - name: POS5/0
+    description: "Link R4 TO R5"
+    ip_address: "192.50.25.113"
+    subnet_mask: "255.255.255.252"
+  - name: POS6/0
+    description: "Link R4 TO R7"
+    ip_address: "192.50.25.133"
+    subnet_mask: "255.255.255.252"
+  - name: Loopback10
+    description: "Loopback on router "
+    ip_address: "4.4.4.4"
+    subnet_mask: "255.255.255.255"

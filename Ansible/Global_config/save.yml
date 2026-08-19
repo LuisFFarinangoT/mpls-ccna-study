@@ -1,0 +1,15 @@
+---
+- name: Apply wr commands all routers 
+  hosts: all
+  gather_facts: no
+  tasks:
+  - name: save config to memory
+    ansible.netcommon.cli_command:
+      command: '{{ item }}'
+      prompt:
+        - "Overwrite the previous NVRAM configuration?[confirm]"
+      answer:
+        - "y"
+    loop:
+    - wr
+

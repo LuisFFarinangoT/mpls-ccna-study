@@ -1,0 +1,25 @@
+---
+- name: CONFIG IBGP AND VPN 
+  hosts: R1,R2,R3,R7,R9
+  gather_facts: false
+
+  tasks:
+    - name: Configure BGP Global and Neighbors
+      cisco.ios.ios_config:
+        lines:
+          - neighbor {{ item.neighbor }} remote-as {{ item.peer_asn }}
+          - neighbor {{ item.neighbor }} update-source  {{ item.update_source }}
+          - neighbor {{ item.neighbor }} next-hop-self
+        parents:
+          - router bgp {{ asn }}
+      loop: "{{ peers }}"
+    - name: Configure BGP VPN 
+      cisco.ios.ios_config:
+        lines:
+          - no bgp default ipv4-unicast
+          - address-family vpnv4
+          - neighbor {{ item.neighbor }} activate
+          - neighbor {{ item.neighbor }} send-community
+        parents:
+          - router bgp {{ asn }}
+      loop: "{{ peers }}"

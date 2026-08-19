@@ -1,0 +1,7 @@
+ansible_user: admin
+ansible_password: "{{ ansible_cisco_password }}"    # References vault
+ansible_become: yes
+ansible_become_method: enable
+ansible_become_password: "{{ ansible_cisco_password }}"    # References vault
+ansible_network_os: cisco.ios.ios
+ansible_connection: ansible.netcommon.network_cli

@@ -1,0 +1,49 @@
+---
+all:
+  children:
+    routers:
+      hosts:
+        R1:
+          ansible_host: 192.168.1.20
+        R2:
+          ansible_host: 192.168.1.21
+        R3:
+          ansible_host: 192.168.1.22
+        R4:
+          ansible_host: 192.168.1.23
+        R5:
+          ansible_host: 192.168.1.24
+        R6:
+          ansible_host: 192.168.1.25
+        R7:
+          ansible_host: 192.168.1.26
+        R8:
+          ansible_host: 192.168.1.27
+        R9:
+          ansible_host: 192.168.1.28
+        R10:
+          ansible_host: 192.168.1.29
+        R11:
+          ansible_host: 192.168.1.30
+        R12:
+          ansible_host: 192.168.1.31
+        R13:
+          ansible_host: 192.168.1.32
+        R14:
+          ansible_host: 192.168.1.33
+
+        
+  vars_files:
+    - group_vars/all/secrets.yml
+    - group_vars/all/vars_used.yml
+  vars:
+    ansible_network_os: cisco.ios.ios
+    ansible_connection: ansible.netcommon.network_cli
+    ansible_libssh_user:  lfftadmin
+    ansible_libssh_pass: "{{ ansible_cisco_password }}"
+    ansible_ssh_private_key_file: /home/lfft/.ssh/id_rsa 
+    #ansible_ssh_common_args: '-o PubkeyAcceptedAlgorithms=+ssh-rsa,+diffie-hellman-group14-sha1 -c aes256-cbc -o RequiredRSASize=1024'
+    #ansible_ssh_common_args: '-o KexAlgorithms=+diffie-hellman-group14-sha1,diffie-hellman-group1-sha1'
+    ansible_network_cli_ssh_type: libssh
+    
+

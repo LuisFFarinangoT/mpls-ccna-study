@@ -1,0 +1,50 @@
+---
+- name: OSPF AREA 0 v4 AND MPLS
+  hosts: R1,R2,R3,R4,R5,R6,R7,R8,R9
+  gather_facts: false
+
+  tasks:
+    - name: Remove no service config
+      cisco.ios.ios_config:
+        lines:
+          - no service config
+        save_when: modified
+
+    - name: Push OSPF interface parameters
+      cisco.ios.ios_ospf_interfaces:
+        config:
+          - name: "{{ item.name }}"
+            address_family: "{{ item.address_family }}"
+        state: merged
+      loop: "{{ ospf_interfaces }}"
+
+    - name: Ensure MPLS is globally enabled
+      cisco.ios.ios_config:
+        lines:
+          - mpls ip
+
+    - name: Enable MPLS on specified interfaces
+      cisco.ios.ios_config:
+        lines:
+          - mpls ip
+        parents: "interface {{ item.name }}"
+      loop: "{{  ospf_interfaces }}"
+
+    - name: Configure MPLS label range on Cisco IOS
+      cisco.ios.ios_config:
+        lines:
+          - "mpls label range {{ item.min_label }} {{ item.max_label }}"
+      loop: "{{ mpls_label_ranges }}"
+      when: mpls_label_ranges is defined
+
+    - name: Enable MPLS LDP sync and autoconfig on every interface 
+      cisco.ios.ios_config:
+        lines:
+          - mpls ldp autoconfig
+          - mpls ldp sync
+        parents:
+          - router ospf {{ item.address_family[0].process.id }}
+      loop: "{{ ospf_interfaces }}"
+
+
+

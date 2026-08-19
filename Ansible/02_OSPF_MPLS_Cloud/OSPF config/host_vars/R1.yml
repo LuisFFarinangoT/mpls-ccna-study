@@ -1,0 +1,19 @@
+ospf_interfaces:
+
+  - name: POS3/0 
+    address_family:
+      - afi: ipv4
+        process:
+          id: 10
+          area_id: 0
+  - name: Loopback10 
+    address_family:
+      - afi: ipv4
+        process:
+          id: 10
+          area_id: 0
+mpls_label_ranges:
+  - min_label: 100
+    max_label: 199
+
+    

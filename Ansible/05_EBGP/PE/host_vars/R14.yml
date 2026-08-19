@@ -1,0 +1,6 @@
+asn: "65002"
+bgp_router_id: 14.14.14.14
+peers:
+  - neighbor: "192.50.25.149"
+    peer_asn: "100"
+    remote_as: "100"

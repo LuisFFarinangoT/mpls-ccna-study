@@ -1,0 +1,12 @@
+- name: Configure Interfaces on Cisco IOS
+  hosts: R1,R2,R3,R4,R5,R6,R7,R8,R9,R10,R11,R12,R13,R14
+  gather_facts: no
+  tasks:
+    - name: Add ip address 
+      cisco.ios.ios_config:
+        lines:
+          - description {{ item.description }}
+          - ip address {{ item.ip_address }} {{ item.subnet_mask }}
+          - no shutdown
+        parents: "interface {{ item.name }}"
+      loop: "{{ device_interfaces }}"

@@ -1,0 +1,13 @@
+device_interfaces:
+  - name: GigabitEthernet0/0
+    description: "Link R14 to R10"
+    ip_address: "192.50.25.150"
+    subnet_mask: "255.255.255.252"
+  - name: POS3/0
+    description: "LAN R14"
+    ip_address: "192.50.25.49"
+    subnet_mask: "255.255.255.240"
+  - name: Loopback10
+    description: "Loopback on router "
+    ip_address: "14.14.14.14"
+    subnet_mask: "255.255.255.255"
